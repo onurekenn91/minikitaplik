@@ -1,7 +1,7 @@
 const AramaKutusu = ({ aramaMetni, setAramaMetni }) => (
   <input
     type="text"
-    placeholder="Kitap ara..."
+    placeholder="Başlık veya yazar ara..."
     value={aramaMetni}
     onChange={(e) => setAramaMetni(e.target.value)}
   />

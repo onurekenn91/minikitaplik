@@ -1,16 +1,16 @@
-import Kitap from './Kitap';
+import KitapKarti from './KitapKarti';
 
-const KitapListesi = ({ kitaplar, favoriEkle, favoriler }) => (
-  <div>
+const KitapListesi = ({ kitaplar, favoriEkleKaldir, favoriler }) => (
+  <>
     {kitaplar.map((kitap) => (
-      <Kitap
+      <KitapKarti
         key={kitap.id}
         kitap={kitap}
-        favoriEkle={favoriEkle}
+        favoriEkleKaldir={favoriEkleKaldir}
         favoriMi={favoriler.some((f) => f.id === kitap.id)}
       />
     ))}
-  </div>
+  </>
 );
 
 export default KitapListesi;

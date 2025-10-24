@@ -1,13 +1,15 @@
-const FavoriPaneli = ({ favoriler, favoriKaldir, aramaMetni }) => (
+const FavoriPaneli = ({ favoriler, favoriKaldir }) => (
   <div className="favori-paneli">
-    <h3>⭐ Favoriler</h3>
-    <p>Son Arama: <em>{aramaMetni}</em></p>
-    {favoriler.map((kitap) => (
-      <div key={kitap.id}>
-        {kitap.baslik}
-        <button onClick={() => favoriKaldir(kitap.id)}>Kaldır</button>
-      </div>
-    ))}
+    <h3>Favoriler ({favoriler.length})</h3>
+
+    <ul>
+      {favoriler.map((kitap) => (
+        <li key={kitap.id}>
+          <span>{kitap.baslik}</span>
+          <button onClick={() => favoriKaldir(kitap)}>Kaldır</button>
+        </li>
+      ))}
+    </ul>
   </div>
 );
 
